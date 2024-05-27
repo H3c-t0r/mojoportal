@@ -30,10 +30,10 @@ namespace mojoPortal.Web.Editor
 			}
 		}
 
-		public string CustomConfigPath { get; set; } = WebConfigSettings.CKEditor5ConfigPath;
+		//public string CustomConfigPath { get; set; } = WebConfigSettings.CKEditor5ConfigPath;
 
 
-		public string BasePath { get; set; } = WebConfigSettings.CKEditor5BasePath;
+		//public string BasePath { get; set; } = WebConfigSettings.CKEditor5BasePath;
 
 		public string SiteRoot { get; set; } = "~/";
 
@@ -79,7 +79,7 @@ namespace mojoPortal.Web.Editor
 			Rows = 10;
 			Columns = 70;
 
-			htmlEncode = WebConfigSettings.CKeditor5EncodeBrackets;
+			//htmlEncode = WebConfigSettings.CKeditor5EncodeBrackets;
 
 			if (SiteRoot.StartsWith("~/"))
 			{
@@ -130,7 +130,7 @@ namespace mojoPortal.Web.Editor
 				this,
 				this.GetType(),
 				"ckeditor5main",
-				"\n<script data-loader=\"ckeditor5control\" src=\"" + ResolveUrl(this.BasePath + "ckeditor.js") + "\"></script>",
+				"\n<script data-loader=\"ckeditor5control\" src=\"" + ResolveUrl("ClientScript\\ckeditor5\\ckeditor.js") + "\"></script>",
 				false
 			);
 
